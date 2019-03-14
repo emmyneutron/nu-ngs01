@@ -59,14 +59,14 @@ rm draft.txt
 
 ```bash
 cd molecules
-wc *.pdb
+wc *.pdb #count lines & words and bytes
 wc -l *.pdb > lengths.txt
 cat lengths.txt
 sort -n lengths.txt
 sort -n lengths.txt > sorted-lengths.txt
 head -n 1 sorted-lengths.txt
 sort -n lengths.txt | head -n 1
-wc -l *.pdb | sort -n | head -n 1
+wc -l *.pdb | sort -n | head -n 1 #sorting before count is important as the wc count what it found firstly without counting the similar
 cd ../
 wc -l notes.txt
 wc -l < notes.txt
