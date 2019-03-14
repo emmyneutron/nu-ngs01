@@ -31,17 +31,17 @@ ls
 
 ```bash
 mkdir thesis lectures
-#Write text, save by CTRL-O 
-nano draft.txt
+#Write text, save by CTRL-O / there is alot of txt editors (Vi) vim
+nano draft.txt #if we missed up our file location we can search for it by locate
 
 mv lectures manuscript
-mv manuscript thesis/. 
-mv draft.txt final.txt
+mv manuscript thesis/. #move
+mv draft.txt final.txt #rename
 mv final.txt thesis/.
 mv thesis/final.txt draft.txt
 
-cp draft.txt thesis/
-cp draft.txt thesis/2ndCopy.txt
+cp draft.txt thesis/ #copy and relocate
+cp draft.txt thesis/2ndCopy.txt #copy, rename and relocate
 
 rm thesis
 rm -r thesis
