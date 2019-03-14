@@ -41,10 +41,11 @@ mv final.txt thesis/.
 mv thesis/final.txt draft.txt
 
 cp draft.txt thesis/ #copy and relocate
-cp draft.txt thesis/2ndCopy.txt #copy, rename and relocate
+cp draft.txt thesis/2ndCopy.txt #copy file, rename and relocate
+cp -r 'mr_eyes/' 'mr_lids/' #copy directory
 
-rm thesis
-rm -r thesis
+rm thesis #remove file
+rm -r thesis #remove directory
 rm draft.txt
 ```
 
