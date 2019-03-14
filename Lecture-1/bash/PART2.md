@@ -35,10 +35,14 @@ mkdir thesis lectures
 nano draft.txt #if we missed up our file location we can search for it by locate
 
 mv lectures manuscript
-mv manuscript thesis/. #move
+mv manuscript thesis/. #move file or directory
 mv draft.txt final.txt #rename
 mv final.txt thesis/.
-mv thesis/final.txt draft.txt
+mv thesis/final.txt draft.txt #rename file with path
+#move multiple files
+mv -t path file1 file2 file3
+or
+mv -t path  `ls|grep IDENTIFIER`
 
 cp draft.txt thesis/ #copy and relocate
 cp draft.txt thesis/2ndCopy.txt #copy file, rename and relocate
@@ -62,11 +66,11 @@ cd molecules
 wc *.pdb #count lines & words and bytes
 wc -l *.pdb > lengths.txt
 cat lengths.txt
-sort -n lengths.txt
+sort -n lengths.txt # sort -n numerical sort
 sort -n lengths.txt > sorted-lengths.txt
 head -n 1 sorted-lengths.txt
 sort -n lengths.txt | head -n 1
-wc -l *.pdb | sort -n | head -n 1 #sorting before count is important as the wc count what it found firstly without counting the similar
+wc -l *.pdb | sort -n | head -n 1 # we can put any number of lines we want / needn't to use -n
 cd ../
 wc -l notes.txt
 wc -l < notes.txt
@@ -81,7 +85,7 @@ echo hello >> testfile02.txt
 <b><h3>Run the same line again. What is different?</h3></b>
 
 ```bash
-uniq data/salmon.txt
+uniq data/salmon.txt 
 sort data/salmon.txt | uniq
 ```
 
